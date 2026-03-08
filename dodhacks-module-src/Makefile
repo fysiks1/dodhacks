@@ -3,11 +3,10 @@ OUT += dodhacks_amxx_i386.so
 
 # root directories for external dependencies
 # e.g. `make HLSDK_ROOT=/opt/hlsdk AMXMODX_ROOT=/opt/amxmodx`.
-HLSDK_ROOT ?= /mnt/d/scripting/hlsdk-master
-AMXMODX_ROOT ?= /mnt/d/scripting/amxmodx-master
-SUBHOOK_ROOT ?= /mnt/d/scripting/subhook-master
-METAMOD_HL1_ROOT ?= /mnt/d/scripting/metamod-hl1-master
-METAMOD_SOURCE_ROOT ?= /mnt/d/scripting/metamod-source-master
+HLSDK_ROOT ?= ./hlsdk
+AMXMODX_ROOT ?= ./amxmodx
+SUBHOOK_ROOT ?= ./subhook
+METAMOD_HL1_ROOT ?= ./metamod-hl1
 
 
 SRC += linux_compat.c
@@ -81,7 +80,6 @@ HDR += -I$(AMXMODX_ROOT)/public
 HDR += -I$(AMXMODX_ROOT)/public/sdk
 HDR += -I$(SUBHOOK_ROOT)
 HDR += -I$(METAMOD_HL1_ROOT)/metamod
-HDR += -I$(METAMOD_SOURCE_ROOT)/core/sourcehook
 
 OPT += -fno-exceptions
 OPT += -fno-rtti
