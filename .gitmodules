@@ -9,4 +9,4 @@
 	url = https://github.com/alliedmodders/metamod-hl1.git
 [submodule "dodhacks-module-src/subhook"]
 	path = dodhacks-module-src/subhook
-	url = https://github.com/msojocs/subhook.git
+	url = https://github.com/ClaudiuHKS/subhook.git
