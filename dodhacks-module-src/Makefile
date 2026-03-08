@@ -1,5 +1,6 @@
 CMD += gcc
-OUT += dodhacks_amxx_i386.so
+OUTDIR = ./bin
+OUT += $(OUTDIR)/dodhacks_amxx_i386.so
 
 # root directories for external dependencies
 # e.g. `make HLSDK_ROOT=/opt/hlsdk AMXMODX_ROOT=/opt/amxmodx`.
@@ -122,6 +123,8 @@ OPT += -Wl,--wrap=__isoc23_sscanf
 default:
 
 	rm -f "$(CURDIR)/*.so" "$(CURDIR)/*.0" "$(CURDIR)/*.o" "$(CURDIR)/*.log"
+
+	mkdir -p $(OUTDIR)
 
 ifneq ($(OFL),)
 	cp $(OFL) "$(CURDIR)"
